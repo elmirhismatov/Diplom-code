@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Быстрый старт. Размещение интерактивной карты на странице</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <script src="https://api-maps.yandex.ru/2.1/?apikey=e136236d-51d6-4474-8ff5-382e77b218e2&lang=ru_RU" type="text/javascript">
+    </script>
+    <script type="text/javascript">
+        ymaps.ready(init);
+        function init(){
+            var myMap = new ymaps.Map("map", {
+                center: [61.24942013169517,73.40993995227039],
+                zoom: 14
+            });
+        }
+fetch('https://geocode-maps.yandex.ru/1.x/?apikey=e136236d-51d6-4474-8ff5-382e77b218e2&format=json&geocode=сургут')
+  .then((response) => {
+    return response.json();
+  })
+  .then((data) => {
+    console.log(data);
+  });
+fetch('https://search-maps.yandex.ru/v1/?apikey=b774c439-0479-418c-b490-5eceae361a0f&text=%D0%BA%D0%B0%D1%84%D0%B5%20%D1%81%D1%83%D1%80%D0%B3%D1%83%D1%82&lang=ru')
+  .then((response) => {
+    return response.json();
+  })
+  .then((data) => {
+    console.log('кафе',data);
+  });
+fetch('https://search-maps.yandex.ru/v1/?apikey=b774c439-0479-418c-b490-5eceae361a0f&text=%D0%B3%D0%B8%D0%BF%D0%B5%D1%80%D0%BC%D0%B0%D1%80%D0%BA%D0%B5%D1%82%20%D0%A1%D1%83%D1%80%D0%B3%D1%83%D1%82&lang=ru')
+  .then((response) => {
+    return response.json();
+  })
+  .then((data) => {
+    console.log('гипермаркет',data);
+  });
+fetch('https://search-maps.yandex.ru/v1/?apikey=b774c439-0479-418c-b490-5eceae361a0f&text=%D0%92%D0%BA%D1%83%D1%81%D0%BD%D0%BE%20%D0%B8%20%D1%82%D0%BE%D1%87%D0%BA%D0%B0%20%D0%A1%D1%83%D1%80%D0%B3%D1%83%D1%82&lang=ru')
+  .then((response) => {
+    return response.json();
+  })
+  .then((data) => {
+    console.log('мак по русски',data);
+  });
+
+    </script>
+</head>
+
+<body>
+    <div id="map" style="width: 800px; height: 600px"></div>
+</body>
+
+</html>
