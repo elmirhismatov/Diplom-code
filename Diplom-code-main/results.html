@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <title>Результат</title>
+  <meta charset="utf-8">
+  <link rel = "stylesheet" href="../assets/results style.css" > 
+ </head>
+ <body>
+  <div id="results" class = "page3">
+ <div class="container"> 
+  <div id="competitors">
+  </div>
+</div>
+<div class="podcontainer">
+  <div id="organizations">
+  </div>
+  </div>
+  <div class="podpodcontainer">
+    <div id="market">
+    </div>
+  </div>
+  
+ 
+ <form>
+  <button> <a href="Mainpage.html">Вернуться на главную страницу</a> </button>
+</form>
+</div>
+<script >
+  const competitors=document.getElementById("competitors")
+  competitors.innerText=localStorage.getItem("Cafe")
+</script>
+<script>
+  const organizations=document.getElementById("organizations")
+  organizations.innerText=localStorage.getItem("Orga")
+</script>
+<script>
+  const market=document.getElementById("market")
+  market.innerText=localStorage.getItem("Giper")
+</script>
+ </body>
+</html>

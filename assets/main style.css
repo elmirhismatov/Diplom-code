@@ -1,0 +1,10 @@
+.page1
+{
+    inline-size: 1920px;
+    block-size: 1080px;
+    background-color: cyan;
+}
+h1
+{
+    color:black;
+}
