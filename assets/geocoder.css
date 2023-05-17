@@ -3,6 +3,10 @@
   justify-content: space-between;
 }
 
+.result:hover {
+  color: white;
+  background-color: black;
+}
 
 .dropbtn {
     background-color: #4CAF50;

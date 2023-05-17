@@ -25,4 +25,7 @@
   // При загрузке страницы проверяем, есть ли сохраненное значение в localStorage
   if (localStorage.getItem("selectedValue")) {
     dropbtn.textContent = localStorage.getItem("selectedValue");
+    window.addEventListener('beforeunload', function() {
+      localStorage.removeItem('dropdown');
+    });
   }

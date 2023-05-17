@@ -6,7 +6,7 @@
   <link rel = "stylesheet" href="../assets/results style.css" > 
  </head>
  <body>
-  <div id="results" class = "page3">
+  <div id="results" class = "page2">
  <div class="container"> 
   <div id="competitors">
   </div>
@@ -28,14 +28,23 @@
 <script >
   const competitors=document.getElementById("competitors")
   competitors.innerText=localStorage.getItem("Cafe")
+  window.addEventListener('beforeunload', function() {
+  localStorage.removeItem('Cafe');
+});
 </script>
 <script>
   const organizations=document.getElementById("organizations")
   organizations.innerText=localStorage.getItem("Orga")
+  window.addEventListener('beforeunload', function() {
+  localStorage.removeItem('Orga');
+});
 </script>
 <script>
   const market=document.getElementById("market")
   market.innerText=localStorage.getItem("Giper")
+  window.addEventListener('beforeunload', function() {
+  localStorage.removeItem('Giper');
+});
 </script>
  </body>
 </html>

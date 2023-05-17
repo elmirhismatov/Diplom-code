@@ -1,9 +1,15 @@
 .page1
 {
-    inline-size: 1920px;
-    block-size: 1080px;
+    inline-size: 100%;
+    block-size: 100vh;
     background-color: cyan;
 }
+
+* {
+    margin: 0;
+    padding: 0;
+  }
+
 h1
 {
     color:black;
