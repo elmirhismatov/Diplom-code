@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Результат</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="../assets/results style.css">
+</head>
+<body>
+<p>Произвольный текст, сделан сразу со стилем</p>
+<div class="results" id="results">
+    <div class="podcontainer">
+        <div id="competitors">
+        </div>
+    </div>
+    <div class="podcontainer">
+        <div id="organizations">
+        </div>
+    </div>
+    <div class="podcontainer">
+        <div id="market">
+        </div>
+    </div>
+        <div class="podcontainer">
+        <div id="persent">
+        </div>
+    </div>
+</div>
+
+<div class="results2" id="results2">
+    <div class="podcontainer2">
+        <div id="final">
+        </div>
+    </div>
+</div>
+
+
+    <form class="btnall">
+        <button class="btn"><a href="Mainpage.html">Вернуться на главную страницу</a></button>
+        <button class="btn"><a href="comments.html">Перейти на страницу с комментариями</a></button>
+    </form>
+
+
+
+<script>
+  const competitors=document.getElementById("competitors")
+  competitors.innerText=localStorage.getItem("Cafe")
+  window.addEventListener('beforeunload', function() {
+  localStorage.removeItem('Cafe');
+});
+
+</script>
+<script>
+  const organizations=document.getElementById("organizations")
+  organizations.innerText=localStorage.getItem("Orga")
+  window.addEventListener('beforeunload', function() {
+  localStorage.removeItem('Orga');
+});
+
+</script>
+<script>
+  const market=document.getElementById("market")
+  market.innerText=localStorage.getItem("Giper")
+  window.addEventListener('beforeunload', function() {
+  localStorage.removeItem('Giper');
+});
+
+</script>
+</body>
+</html>
