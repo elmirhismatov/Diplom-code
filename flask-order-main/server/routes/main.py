@@ -1,4 +1,5 @@
 from flask import Blueprint, render_template
+# from coord_repository inport 
 
 mainpg = Blueprint('mainpg', __name__)
 

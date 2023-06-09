@@ -66,11 +66,18 @@ function init() {
                 localStorage.setItem("Orga", data.features.length)
             });
         axios.post("http://127.0.0.1:5000/coord", { coords })
-            .then((response) => console.log(response.data))
+            .then((response) => {
+                console.log(response.data);
+                localStorage.setItem("People",response.data[1]);
+        })
+            
             .catch(error => {
                 console.log(error)
                 alert("Ошибка обращения к BackEnd: " + error)
-            })
+            });
+            
+            
+            // peoples.innerText = response.data[1];
         // Создание метки.
         function createPlacemark(coords) {
             return new ymaps.Placemark(coords, {

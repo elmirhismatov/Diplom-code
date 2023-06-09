@@ -24,7 +24,7 @@
         </div>
     </div>
         <div class="podcontainer">
-        <div id="persent">
+        <div id="peoples">
         </div>
     </div>
 </div>
@@ -74,6 +74,17 @@
 });
 
 </script>
+<script>
+    const peoples=document.getElementById("peoples");
+    const peoplesValue=localStorage.getItem( "People");
+    const multiplie3dValue = parseFloat(peoplesValue) * (0.5);
+    
+    peoples.innerText = multiplie3dValue;
+    window.addEventListener('beforeunload', function() {
+    localStorage.removeItem('People');
+  });
+  
+  </script>
 
 
 </body>
