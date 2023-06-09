@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Результат</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="/static/assets/results style.css">
+</head>
+<body>
+
+<div class="results" id="results">
+    <div class="podcontainer">
+        <div id="competitors">
+            <p>Конкуренты</p>
+        </div>
+    </div>
+    <div class="podcontainer">
+        <div id="organizations">
+            <p>Организации</p>
+        </div>
+    </div>
+    <div class="podcontainer">
+        <div id="market">
+            <p>Супермаркеты</p>
+        </div>
+    </div>
+        <div class="podcontainer">
+        <div id="persent">
+        </div>
+    </div>
+</div>
+
+<div class="results2" id="results2">
+    <div class="podcontainer2">
+        <div id="final">
+        </div>
+    </div>
+</div>
+
+
+    <form class="btnall">
+        <button class="btn"><a href="Mainpage.html">Вернуться на главную страницу</a></button>
+        <button class="btn"><a href="comments.html">Перейти на страницу с комментариями</a></button>
+    </form>
+
+
+
+<script>
+  const competitors = document.getElementById("competitors");
+  const cafeValue = localStorage.getItem("Cafe");
+  const multipliedValue = parseFloat(cafeValue) * (-1);
+  competitors.innerText = multipliedValue;
+  window.addEventListener('beforeunload', function() {
+  localStorage.removeItem('Cafe');
+});
+
+</script>
+<script>
+  const organizations=document.getElementById("organizations");
+  const orgaValue=localStorage.getItem( "Orga");
+  const multiplie1dValue = parseFloat(orgaValue) * (0.5);
+  organizations.innerText = multiplie1dValue;
+  window.addEventListener('beforeunload', function() {
+  localStorage.removeItem('Orga');
+});
+
+</script>
+<script>
+  const market=document.getElementById("market");
+  const giperValue=localStorage.getItem( "Giper");
+  const multiplie2dValue = parseFloat(giperValue) * (0.5);
+  market.innerText = multiplie2dValue;
+  window.addEventListener('beforeunload', function() {
+  localStorage.removeItem('Giper');
+});
+
+</script>
+
+
+</body>
+</html>
