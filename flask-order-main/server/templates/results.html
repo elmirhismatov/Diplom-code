@@ -7,27 +7,32 @@
 </head>
 <body>
 
-<div class="results" id="results">
-    <div class="podcontainer">
-        <div id="competitors">
-            <p>Конкуренты</p>
-        </div>
-    </div>
-    <div class="podcontainer">
-        <div id="organizations">
-            <p>Организации</p>
-        </div>
-    </div>
-    <div class="podcontainer">
-        <div id="market">
-            <p>Супермаркеты</p>
-        </div>
-    </div>
+    <div class="results" id="results">
         <div class="podcontainer">
-        <div id="peoples">
+            <div id="competitors">
+                <p>Конкуренты</p>
+            </div>
+        </div>
+        <div class="podcontainer">
+            <div id="organizations">
+                <p>Организации</p>
+            </div>
+        </div>
+        <div class="podcontainer">
+            <div id="market">
+                <p>Супермаркеты</p>
+            </div>
+        </div>
+        <div class="podcontainer">
+            <div id="peoples">
+            </div>
+        </div>
+        <div class="podcontainer">
+            <div id="rent">
+                <p id="rent-value"></p>
+            </div>
         </div>
     </div>
-</div>
 
 <div class="results2" id="results2">
     <div class="podcontainer2">
@@ -77,15 +82,28 @@
 <script>
     const peoples=document.getElementById("peoples");
     const peoplesValue=localStorage.getItem( "People");
-    const multiplie3dValue = parseFloat(peoplesValue) * (0.5);
-    
+    const multiplie3dValue = parseFloat(peoplesValue) ;   
     peoples.innerText = multiplie3dValue;
     window.addEventListener('beforeunload', function() {
     localStorage.removeItem('People');
   });
-  
+  </script>
+<script>
+    const rentValue = Math.floor(Math.random() * (15 - 10 + 1)) - 15;
+    document.getElementById("rent-value").innerText = rentValue;
   </script>
 
+<script>
+    const competitorsValue = parseFloat(document.getElementById("competitors").innerText);
+    const organizationsValue = parseFloat(document.getElementById("organizations").innerText);
+    const marketValue = parseFloat(document.getElementById("market").innerText);
+    const PeoplesValue = parseFloat(document.getElementById("peoples").innerText);
+    const RentValue = parseFloat(document.getElementById("rent").innerText);
+    
+    const sum = competitorsValue + organizationsValue + marketValue + PeoplesValue + RentValue + 50;
+    
+    document.getElementById("final").innerText = "Итог: " + sum + "%";
+  </script>
 
 </body>
 </html>
