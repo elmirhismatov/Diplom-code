@@ -1,0 +1,77 @@
+html {
+  height: 100vh;
+  weight: 100vw;
+}
+
+body {
+    background: linear-gradient(to bottom, #4E36A7, #FFFFFF) no-repeat;
+    font-family: 'Arial', sans-serif;
+    text-align: center;
+}
+
+h1 {
+    font-family: "Helvetica Neue", Arial, sans-serif;
+}
+
+button {
+  background-color: #ffcccc;
+  color: black;
+  padding: 10px 20px;
+  font-size: 16px;
+  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+  border-radius: 10px;
+}
+
+form {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    align-items: center;
+}
+
+button:hover {
+  background-color: #ffaaaa;
+  color: #ffffff;
+  padding: 10px 20px;
+  font-size: 16px;
+}
+
+form button {
+  margin: 20px;
+}
+
+a {
+    text-decoration: none;
+}
+
+.btn a {
+text-decoration:none;
+color:white;
+}
+
+.btn {
+margin-right:20px;
+margin-top:175px;
+background-color: #4CAF50;
+    color: white;
+    font-size: 16px;
+    border: none;
+    margin-bottom: 10px;
+    border-radius: 5px;
+width: 200px;
+height:50px;
+}
+.btn:hover {
+background-color: #4CAF50;
+box-shadow: 15px 13px 20px 6px rgba(34, 60, 80, 0.2);
+}
+
+.input{
+border-radius: 5px; /* Задаем скругление краев */
+  padding: 15px; /* Задаем отступы внутри поля */
+  position: absolute; /* Задаем абсолютное позиционирование */
+  top: 16px; /* Располагаем поле ввода вверху страницы */
+  left: 10px;
+
+
+}
