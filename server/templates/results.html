@@ -8,36 +8,51 @@
 <body>
 
     <div class="results" id="results">
+        <div id="name">
+        <h2>Количество конкурентов</h2>
         <div class="podcontainer">
-            <div id="competitors">
-                <p>Конкуренты</p>
+           
+                <div id="competitors">        
+                </div>       
             </div>
         </div>
+        <div id="name">
+        <h2>Количество организаций</h2>
         <div class="podcontainer">
-            <div id="organizations">
-                <p>Организации</p>
+           
+                <div id="organizations">     
+                </div>
             </div>
         </div>
+        <div id="name">
+            <h2>Количество торговых точек</h2>
         <div class="podcontainer">
-            <div id="market">
-                <p>Супермаркеты</p>
+            
+                <div id="market"> 
+                </div>
             </div>
         </div>
-        <div class="podcontainer">
-            <div id="peoples">
+        <div id="name">
+            <h2>Количество людей</h2>
+         <div class="podcontainer">    
+                 <div id="peoples">  
+                </div>
             </div>
         </div>
-        <div class="podcontainer">
-            <div id="rent">
-                <p id="rent-value"></p>
+        <div id="name">
+            <h2>Цена аренды</h2>
+         <div class="podcontainer">   
+                <div id="rent">         
+                    <p id="rent-value"></p>
             </div>
+         </div>
         </div>
     </div>
 
-<div class="results2" id="results2">
+<div class="results2" id="results2">    
     <div class="podcontainer2">
         <div id="final">
-        </div>
+    </div>
     </div>
 </div>
 
@@ -55,7 +70,7 @@
   const multipliedValue = parseFloat(cafeValue) * (-1);
   competitors.innerText = multipliedValue;
   window.addEventListener('beforeunload', function() {
-  localStorage.removeItem('Cafe');
+  localStorage.removeItem('compepitors');
 });
 
 </script>
@@ -102,7 +117,7 @@
     
     const sum = competitorsValue + organizationsValue + marketValue + PeoplesValue + RentValue + 50;
     
-    document.getElementById("final").innerText = "Итог: " + sum + "%";
+    document.getElementById("final").innerText = "Процент выгодности составляет : " + sum + "%";
   </script>
 
 </body>

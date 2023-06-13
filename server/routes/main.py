@@ -15,6 +15,9 @@ def route_test3():
 @mainpg.route("/comments.html")
 def route_test4():
     return render_template("./comments.html")
-@mainpg.route("/Mainpage.html")
+@mainpg.route("/comment_form.html")
 def route_test5():
+    return render_template("./comment_form.html")
+@mainpg.route("/Mainpage.html")
+def route_test6():
     return render_template("./Mainpage.html")

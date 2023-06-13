@@ -7,48 +7,39 @@
 </head>
 <body>
 
-
     <div class="titleB">
-    <h1>Отзывы пользователей</h1>
+        <h1>Отзывы пользователей</h1>
     </div>
-
-<div id="comments" class="page3">
-    <div class="results" id="results">
-        <div class="podcontainer">
-            <div id="competitors">
+    <form action="/comments" method="POST">
+    <div id="comments" class="page3">
+        <div class="results" id="results">
+            {% for comment in comments %}
+            <div class="podcontainer">
+                <div>{{ comment[0] }}:</div>
+                <div>{{ comment[1] }}</div>
             </div>
+            {% endfor %}
         </div>
-        <div class="podcontainer">
-            <div id="organizations">
-            </div>
-        </div>
-        <div class="podcontainer">
-            <div id="market">
-            </div>
-        </div>
-
     </div>
-
-    <div class="results2"s id="results2" class="page2">
-        <div class="podcontainer2">
-            <div id="competitors2">
-            </div>
-        </div>
-        <div class="podcontainer2">
-            <div id="organizations2">
-            </div>
-        </div>
-        <div class="podcontainer2">
-            <div id="market2">
-            </div>
-        </div>
-
-    </div>
-
+    </form>
     <form>
         <button class="btn"><a href="Mainpage.html">Вернуться на главную страницу</a></button>
-        <button class="btn"><a href="comments.html">Оставить комментарий</a></button>
+        <button class="btn"><a href="comment_form.html">Оставить комментарий</a></button>
     </form>
-</div>
+    <script>
+        fetch('/comments')
+          .then(response => response.json())
+          .then(data => {
+            data.forEach(comment => {
+              let commentElement = document.createElement('div')
+              commentElement.classList.add('comment')
+              let textElement = document.createElement('p')      
+              textElement.classList.add('comment-text')   
+              textElement.innerHTML = comment.text
+              commentElement.appendChild(textElement) 
+              document.body.appendChild(commentElement)
+            })
+          })
+        </script>
 </body>
 </html>

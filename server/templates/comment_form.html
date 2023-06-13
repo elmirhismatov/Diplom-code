@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Форма комментариев</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="/static/assets/comments_form.css">
+  </head>
+  <body>
+    <h1>Оставьте свой комментарий</h1>
+    <form action="/submit_comment" method="POST">
+      <label for="name">Ваше имя:</label>
+      <input type="text" id="name" name="name"><br>
+      <label for="comment">Ваш комментарий:</label>
+      <textarea id="comment" name="comment"></textarea><br>
+      <input type="submit" value="Отправить">
+    </form>
+    <form class="btnall">
+      <button class="btn"><a href="Mainpage.html">Вернуться на главную страницу</a></button>
+    </form>
+    
+  </body>
+
+</html>
