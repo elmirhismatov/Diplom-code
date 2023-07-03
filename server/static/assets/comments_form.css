@@ -1,7 +1,4 @@
-/* html {
-    height: 100vh;
-    weight: 100vw;
-  } */
+
 
 body {
     background: linear-gradient(to bottom,#4E36A7, #FFFFFF) no-repeat;
@@ -19,6 +16,7 @@ h1 {
     }
     
 .btn {
+margin: 0 auto;
 margin-right:20px;
 margin-top:175px;
 background-color: #4CAF50;
@@ -34,3 +32,18 @@ height:50px;
 background-color: #4CAF50;
 box-shadow: 15px 13px 20px 6px rgba(34, 60, 80, 0.2);
 }
+#name {
+    margin: 0 auto;
+    width: 5%;
+    box-sizing: border-box;
+}
+ #comment {
+    margin: 0 auto;
+    width: 20%;
+    box-sizing: border-box;
+  }
+  input[type="submit"] {
+    width: 200px; /* Устанавливаем ширину кнопки */
+    height: 50px; /* Устанавливаем высоту кнопки */
+    font-size: 2.0em; /* Устанавливаем размер шрифта */
+  }

@@ -26,7 +26,7 @@ def submit_comment():
     conn.commit()
     conn.close()
 
-    return 'Комментарий успешно добавлен в базу данных'
+    return redirect(url_for('show_comments'))
 
 @app.route('/comments')
 def show_comments():

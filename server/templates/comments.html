@@ -15,7 +15,9 @@
         <div class="results" id="results">
             {% for comment in comments %}
             <div class="podcontainer">
+                <div>Имя пользователя</div>
                 <div>{{ comment[0] }}:</div>
+                <div>Комментарий</div>
                 <div>{{ comment[1] }}</div>
             </div>
             {% endfor %}
@@ -24,7 +26,7 @@
     </form>
     <form>
         <button class="btn"><a href="Mainpage.html">Вернуться на главную страницу</a></button>
-        <button class="btn"><a href="comment_form.html">Оставить комментарий</a></button>
+        <button class="btn b"><a href="comment_form.html">Оставить комментарий</a></button>
     </form>
     <script>
         fetch('/comments')
